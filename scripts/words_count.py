@@ -8,16 +8,16 @@ import sys
 
 
 def print_dictionary(dic, file_name):
-    print("Word\tNumber of occurrences in {0}",file_name)
+    print(f"\t\tWord\t\tNumber of occurrences")
+    print(f"\t\t----\t\t---------------------")
     for key in dic.keys():
-        print(f"{key}-{dic[key]}")
+        print('{:>20} {:>20}'.format(key, dic[key]))
 
 def main():
     file_name = input("Please insert file name to work with: ")
     alpha_statistic = {}
     with open(file_name,'r') as f:
         lines = f.readlines()
-        print(lines)
         for line in lines:
             for word in line.split():
                 if word.rstrip() in alpha_statistic.keys():
