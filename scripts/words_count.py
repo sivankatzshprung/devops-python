@@ -20,6 +20,7 @@ def main():
         lines = f.readlines()
         for line in lines:
             for word in line.split():
+                word = word.replace(".","")
                 if word.rstrip() in alpha_statistic.keys():
                     alpha_statistic[word]+=1
                 else:
