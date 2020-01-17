@@ -62,11 +62,14 @@ def repos_with_most_stars(languages, sort="stars", order="desc"):
 
 if __name__ == "__main__":
     languages = ["python", "javascript", "ruby", "go"]
-    results = repos_with_most_stars(languages)
+    try:
+        results = repos_with_most_stars(languages)
 
-    for result in results:
-        language = result["language"]
-        stars = result["stargazers_count"]
-        name = result["name"]
+        for result in results:
+            language = result["language"]
+            stars = result["stargazers_count"]
+            name = result["name"]
+            print(f"-> {name} is a {language} repo with {stars} stars.")
 
-        print(f"-> {name} is a {language} repo with {stars} stars.")
+    except Exception as e:
+        print(e)
