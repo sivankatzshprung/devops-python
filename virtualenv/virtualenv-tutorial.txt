@@ -1,0 +1,22 @@
+virtualenv - you can separete differnt python environments
+
+- pip install virtualenv
+- mkdir Environment
+- cd Environment
+- virtualenv project1_env/ 
+- cd project1_env/Scripts
+- activate.bat
+
+Let's install some packages :
+- pip install numpy
+- pip install pytz
+- pip install psutil
+- pip freeze --local > ..\..\requirments.txt
+- rm -rf project1_env/
+
+Let's create second project with different version of python and install modules
+- virtualenv project2_env/ 
+- virtualenv project2_env/ 
+- cd project2_env/Scripts
+- activate.bat
+- pip install -r ..\..\requirements.txt
