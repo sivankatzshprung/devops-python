@@ -20,6 +20,7 @@
 
 ## Generator expressions
 
+
 my_nums = list(x*x for x in [1,2,3,4,5])
 my_sum = sum([x*x for x in range(1,10)])
 
